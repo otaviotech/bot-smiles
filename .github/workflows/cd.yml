@@ -34,8 +34,9 @@ jobs:
           role-session-name: samplerolesession
           aws-region: ${{ env.AWS_REGION }}
 
+      - uses: hashicorp/setup-terraform@v2
+
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
         working-directory: deployments/terraform
         run: terraform init
 
