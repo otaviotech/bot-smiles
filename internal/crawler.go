@@ -65,9 +65,9 @@ func (c *Crawler) Crawl(ctx context.Context, input CrawlInput) error {
 
 	logger.Printf("Found %d promotions, %d matched the regexes.", len(promotions), len(promotionsToNotify))
 
-	// if len(promotionsToNotify) == 0 {
-	// 	return nil
-	// }
+	if len(promotionsToNotify) == 0 {
+		return nil
+	}
 
 	logger.Printf("Notifying %d promotions to %s.", len(promotionsToNotify), input.EmailToNotify)
 
