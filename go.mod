@@ -1,6 +1,6 @@
 module github.com/otaviotech/bot-smiles
 
-go 1.20
+go 1.23.5
 
 require (
 	github.com/PuerkitoBio/goquery v1.8.1

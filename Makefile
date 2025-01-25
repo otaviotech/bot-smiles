@@ -1,0 +1,2 @@
+dep:
+	go mod tidy
